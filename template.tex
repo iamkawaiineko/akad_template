@@ -1,0 +1,66 @@
+\newcommand{\bearbeiter}{}
+\newcommand{\matrikelnummer}{}
+\newcommand{\email}{}
+\newcommand{\studiengang}{Data Science -- Master of Science (MSc)}
+\newcommand{\ort}{}
+
+
+\newcommand{\titel}{TITEL}
+
+\newcommand{\akadmodule}{}
+\newcommand{\langtitel}{LANGTITEL}
+\newcommand{\beginndatum}{}
+\newcommand{\abgabedatum}{}
+
+\newcommand{\erstgutachter}{}
+\newcommand{\zweitgutachter}{}
+
+% Falls Sie die Arbeit zweiseitig ausdrucken wollen,
+% benutzen Sie die folgende Zeile mit
+% \AN fuer zweiseitigen Druck
+% \AUS fuer einseitigen Druck
+\newcommand{\zweiseitig}{\AUS}
+
+%\newcommand{\biber}{false}
+
+%\newcommand{\sectionforcestartright}{false}
+
+
+
+\newcommand{\sprache}{deutsch}
+
+
+\newcommand{\arbeit}{Assignment}
+
+\documentclass[12pt]{article}
+\input{imports}
+\begin{document}
+%\onehalfspacing
+\input{titlemacros}
+\listoffigures
+\listoftables
+\input{content/abbreviations.tex}
+\clearpage
+\linespread{1.5}
+\pagenumbering{arabic}
+\input{content/introduction.tex}
+\newpage
+\input{content/foundations.tex}
+\newpage
+\input{content/methodology.tex}
+\newpage
+\input{content/conclusion.tex}
+\newpage
+\input{appendix.tex}
+
+
+\clearpage
+
+\pagenumbering{Roman}
+\setcounter{page}{3}
+%\bibliographystyle{chicago}
+\printbibliography
+
+%\bibliographystyle{IEEEtranN}
+
+\end{document}

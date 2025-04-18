@@ -1,0 +1,37 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "workbench.preferredDarkColorTheme": "Abyss",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true,
+
+    // LaTeX-Workshop Konfiguration
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex → biber → pdflatex x2",
+            "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%DOCFILE%"]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "pdflatex → biber → pdflatex x2",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.outDir": "./out"
+}
